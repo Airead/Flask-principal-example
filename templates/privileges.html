@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
 
-  {% if g.identity.name == 'anon' %}
+  {% if not g.identity.id %}
     <h2>You must log in to access this page</h2>
   {% else %}
     <h2>Your current privileges</h2>

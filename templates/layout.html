@@ -43,7 +43,7 @@
                 <a href="{{ url_for('admin') }}">Admin</a>
                 <a href="{{ url_for('editor') }}">Edit</a>
                 <a href="{{ url_for('about') }}">About</a>
-                {% if g.identity.name == 'anon' %}
+                {% if not g.identity.id %}
                     <a href="{{ url_for('login') }}">| Log in</a>
                 {% else %}
                     <a href="{{ url_for('logout') }}">| Log out</a>
